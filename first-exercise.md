@@ -9,15 +9,17 @@ data types:
 
 expressions:
 -------------
-* defining variables
+* defining variables  
 `(define x 5)`
-* defining procedures
+* defining procedures  
 `(define (id x) x)`
-* evaluation of procedures in r5rs
-`(define (f) (f))
+* the applicative order of evaluation in r5rs  
+```
+(define (f) (f))  
 (define (my-if test if-case else-case)
-  (if test if-case else-case))
-(my-if #t 0 (f))`
+  (if test if-case else-case)) 
+(my-if #t 0 (f))
+```
 
 conditionals:
 -------------
@@ -36,4 +38,4 @@ some things about pairs and lists
 
 additional texts:
 -------------
-* [SICP Chapter one][http://mitpress.mit.edu/sicp/full-text/book/book.html]
+* [SICP Chapter one](http://mitpress.mit.edu/sicp/full-text/book/book.html)
