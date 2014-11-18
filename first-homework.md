@@ -15,7 +15,7 @@ Examples:
 > (1 2 3)
 ```
 ```
-> (flatten '('(1 2) '('(1 2) '()) '('('(1)))))
+> (flatten (list (list 1 2) (list (list 1 2) (list)) (list (list (list 1)))))
 > (1 2 1 2 1)
 ```
  
