@@ -19,10 +19,8 @@ lists in haskell:
 
 a little about pattern matching:
 ----------------------
-* `f (x:xs) = ...
+* ```f (x:xs) = ...
+f _      = ...```
 
-f _      = ...`
-
-* `f []     = ...
-
-f (x:xs) = ...`
+* ```f []     = ...
+f (x:xs) = ...```
