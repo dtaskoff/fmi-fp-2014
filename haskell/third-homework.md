@@ -44,5 +44,7 @@ Examples:
 > take 4 $ nodups $ cycle [1, 2]
 [1,2,1,2]
 ```
+```
 > nodups "foo      bar"
 fo bar
+```
