@@ -41,7 +41,7 @@ Examples:
 [1,2,3]
 ```
 ```
-> take 4 $ nodups $ cycle [1, 2]
+> nodups $ take 4 $ cycle [1, 2]
 [1,2,1,2]
 ```
 ```
