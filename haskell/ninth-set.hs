@@ -48,7 +48,7 @@ data Shell a = Empty | A a
     deriving (Read)
 
 instance Show a => Show (Shell a) where
-    show Empty     = "Empty"
+    show Empty = "Empty"
     show (A a) = "A " ++ show a
 
 instance Eq a => Eq (Shell a) where
@@ -88,7 +88,7 @@ insert a (Branch v l r)
 -- Beware! Monoids Follow!
 
 newtype Product' a = Product' { getProduct' :: a }
-    deriving (Show, Read, Eq, Ord, Bounded)
+    deriving (Show, Read, Eq, Ord)
 
 instance Num a => Monoid (Product' a) where
     mempty                              = Product' 1
@@ -108,7 +108,7 @@ value (Append m _ _) = m
 (+++) :: Monoid m => List m a -> List m a -> List m a
 l1 +++ NilList = l1
 NilList +++ l2 = l2
-l1 +++ l2    = Append v l1 l2
+l1 +++ l2      = Append v l1 l2
     where v = (value l1) `mappend` (value l2)
 
 toList :: List m a -> [a]
