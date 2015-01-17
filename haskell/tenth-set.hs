@@ -71,9 +71,9 @@ instance Applicative Parser where
 -- because we may want to get some results
 -- without all parsers in the chain successing
 instance Alternative Parser where
-    empty                       = Parser $ const Nothing
-    (Parser p1) <|> (Parser p2) = Parser $ (<|>) <$> p1 <*> p2
-
+    empty                   = Parser $ const Nothing
+    Parser p1 <|> Parser p2 = Parser $ (<|>) <$> p1 <*> p2
+-- also possible: Parser p1 <|> Parser p1 = Parser $ \s -> p1 s <|> p2 s
 
 -- these are called 'some' and 'many' in the Control.Applicative module
 zeroOrMore :: Parser a -> Parser [a]
