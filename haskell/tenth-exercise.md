@@ -16,23 +16,16 @@ applicatives:
 * implementations of Shell (Maybe), ordinary lists and ziplists
 ```
 instance Applicative Shell where
-
     pure        = A
-
     A f <*> A x = A $ f x
-
     _   <*> _   = Empty
 
 instance Applicative [] where
-
     pure x    = [x]
-
     fs <*> xs = [f x | f <- fs, x <- xs]
 
 instance Applicative ZipList
-
     pure x    = cycle x
-
     fs <*> xs = zipWith ($) fs xs
     
 ```
