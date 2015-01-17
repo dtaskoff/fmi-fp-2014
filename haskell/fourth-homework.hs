@@ -15,6 +15,8 @@ import qualified Data.Map as Map
 -- $> runhaskell parser.hs expressions.txt
 -- > x 3 y 2 z 1
 -- > 3
+-- some explanations: the expressions are calculated scheme-like, only without the parenthesis:
+-- + 3 3 - 4 2 * 5 1 <=> (+ 3 3 (- 4 2 (* 5 1))) <=> (+ 3 3 (- 4 2 5)) <=> (+ 3 3 (-3)) <=> 3
 
 
 
