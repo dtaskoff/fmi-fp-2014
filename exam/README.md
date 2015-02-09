@@ -2,10 +2,11 @@ The Exam
 =============
 
 Finally, we've come to the exam ^^.
+
 As you should already know, there are four tasks:
-    * expression to tree, which must be written in scheme
-    * music sort and expression parser, which must be written in haskell
-    * and tic tac toe which can be written in whichever you want
+* expression to tree, which must be written in scheme
+* music sort and expression parser, which must be written in haskell
+* and tic tac toe which can be written in whichever you want
 
 Every task will be given 1.0 points with the exception
 of expression parser which will give 1.5 points
