@@ -1,4 +1,4 @@
-module Expr where
+module ExprSolved where
 
 
 data Expr = Const Bool
@@ -13,4 +13,10 @@ data Expr = Const Bool
 -- implement the following function, returning
 -- True or False, depending on the expression
 eval :: Expr -> Bool
-eval = undefined
+eval (Const False) = False
+eval (Const True)  = True
+eval (Not x)       = not $ eval x
+eval (Or x y)      = eval x || eval y
+eval (And x y)     = eval x && eval y
+eval (Ift x y)     = not (eval x) || eval y
+eval (Iff x y)     = eval x == eval y
