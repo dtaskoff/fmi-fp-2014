@@ -38,11 +38,11 @@ biconditional = Iff <$> expr
 -- ** (E1<=>E2)
 -- are all expressions too
 expr :: Parser Expr
-expr = inBraces negation
-     <|> inBraces conjunction
-     <|> inBraces disjunction
-     <|> inBraces implication
-     <|> inBraces biconditional
+expr = inBraces (negation
+     <|> conjunction
+     <|> disjunction
+     <|> implication
+     <|> biconditional)
      <|> bool
 
 -- implement a function which accepts a string, parses
