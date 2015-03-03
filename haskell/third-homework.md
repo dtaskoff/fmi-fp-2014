@@ -6,7 +6,7 @@ returns a list of lists, consisting of:
 the first list contains all elements
 the second one contains all elements in steps of one
 the third one contains all elements in steps of two
-tc...
+etc...
 `
  
 Examples:
